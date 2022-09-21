@@ -5,12 +5,14 @@ public class Main{
 
 	public static void main(String[] args) {
 
-		String rules;
+		boolean rules;
+		Scanner scanner = new Scanner (System.in);
+
 
 		if (rules == true){
-			System.out.println("This username complies with the rules");
+			System.out.print("This username complies with the rules");
 		} else{
-			System.out.println("This username is not allowed");
+			System.out.print("This username is not allowed");
 		}	
 		
 	}
