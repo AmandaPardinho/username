@@ -24,7 +24,7 @@ public class Main{
 		System.out.println("Choose your username: ");
 		username = scanner.next();
 
-		if(letter == username.charAt(0) && isLowerCase == true){
+		if(letter == username.charAt(0)){
 			rules = true;
 		} else{
 			if(number == username.charAt(0) || underscore == username.charAt(0)){
