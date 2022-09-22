@@ -24,34 +24,24 @@ public class Main{
 		System.out.println("Choose your username: ");
 		username = scanner.next();
 
-<<<<<<< HEAD
 		if(username.length() < 4 || username.length() > 25){
 			rules = false;
 		}else{
 			rules = true;
 		}
 
-		/*if(username == charAt(0)){
+		if(username.substring(0).matches("[A-Z]")){
+			rules = true;
+		}else{
+			rules = false;
+		}
+
+		if(username.substring().matches("0-9*")){
 			rules = true;
 		} else{
-			if(number = username.charAt(0) || underscore = username.charAt(0)){
-				rules = false;
-			}
-		}*/
-		
-=======
-		if(letter == username.charAt(0)){
-			rules = true;
-		} else{
-			if(number == username.charAt(0) || underscore == username.charAt(0)){
-				rules = false;
-			}
+			rules = false;
 		}
 		
-		
-		
-
->>>>>>> d40e926a7ad28f62a10a36363393f13f1282a85b
 		if (rules == true){
 			System.out.print("This username complies with the rules");
 		} else{
