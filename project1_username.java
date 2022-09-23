@@ -8,11 +8,12 @@ public class Main{
 	public static void main(String[] args) {
 
 		String username;
-		boolean rules;
 		boolean length;
 		boolean isALetter;
 		boolean haveNumber;
-		boolean haveAunderscore;
+		boolean haveAUnderscore;
+		int size = 0;
+		int[] array;
 		
 		Scanner scanner = new Scanner (System.in);
 
@@ -36,25 +37,25 @@ public class Main{
 
 		if(length == true){
             size = username.length();
-            //System.out.println("Username length: " + size);
+            System.out.println("Username length: " + size);
         }
 
-		if(username.substring(0,0).matches("[A-Z]*")){
-			startLetter = true;
+		if(username.substring(0,1).matches("[a-zA-Z]")){
+			isALetter = true;
 		}else{
-			startLetter = false;
+			isALetter = false;
 		}
 
-		if(username.substring(1, size).find("0-9*")){
+		if(isALetter == true && username.contains("^[0-9]")){
 			haveNumber = true;
 		} else{
 			haveNumber = false;
 		}
 
 		if(username.substring().matches("_") && username.substring().lastIndexOf("_")){
-			haveAunderscore = false;
+			haveAUnderscore = false;
 		} else{
-			haveAunderscore = true;
+			haveAUnderscore = true;
 		}
 
 
