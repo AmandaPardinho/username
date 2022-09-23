@@ -35,9 +35,9 @@ public class Main{
 		}
 
 		if(length == true){
-            size = username.length();
-            System.out.println("Username length: " + size);
-        }
+            		size = username.length();
+            		System.out.println("Username length: " + size);
+        	}
 
 		if(username.substring(0,1).matches("[a-zA-Z]")){
 			isALetter = true;
