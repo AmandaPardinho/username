@@ -12,15 +12,13 @@ public class Main{
 		boolean isALetter;
 		boolean haveNumber;
 		boolean haveAUnderscore;
+		boolean isInTheEnd;
 		int size = 0;
-		int[] array;
-		
+				
 		Scanner scanner = new Scanner (System.in);
-
 
 		System.out.println("Create a username following these simple rules: ");
 
-		//Maybe I should do a table to show the rules (?)
 		System.out.println("1- The username is between 4 and 25 characters.");
 		System.out.println("2- It must start with a letter.");
 		System.out.println("3- It can only contain letters, numbers, and the underscore character.");
@@ -30,8 +28,10 @@ public class Main{
 		username = scanner.next();
 
 		if(username.length() < 4 || username.length() > 25){
+			//username length is not allowed because expression == true;
 			length = false;
 		}else{
+			//username length is allowed because expression == false
 			length = true;
 		}
 
@@ -46,20 +46,27 @@ public class Main{
 			isALetter = false;
 		}
 
-		if(isALetter == true && username.contains("^[0-9]")){
+		if(isALetter == true && username.substring(1).matches("[0-9]*")){
 			haveNumber = true;
 		} else{
 			haveNumber = false;
 		}
 
-		if(username.substring().matches("_") && username.substring().lastIndexOf("_")){
-			haveAUnderscore = false;
-		} else{
+		if(username.substring().matches("underscore"){
 			haveAUnderscore = true;
+		} else{
+			haveAUnderscore = false;
 		}
 
+		if(username.substring().lastIndexOf("underscore")){
+			//not allowed
+			isInTheEnd = true;
+		} else{
+			//alowed
+			isInTheEnd = false;
+		}
 
-		if (lenght == true && isALetter == true && haveNumber == true && haveAunderscore == true){
+		if (lenght == true && isALetter == true && haveNumber == true && haveAunderscore == true && isInTheEnd == false){
 			System.out.print("This username complies with the rules");
 		} else{
 			System.out.print("This username is not allowed");
