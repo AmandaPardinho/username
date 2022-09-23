@@ -10,9 +10,9 @@ public class Main{
 		String username;
 		boolean rules;
 		boolean length;
-		boolean startLetter;
+		boolean isALetter;
 		boolean haveNumber;
-		boolean underscore;
+		boolean haveAunderscore;
 		
 		Scanner scanner = new Scanner (System.in);
 
@@ -36,29 +36,29 @@ public class Main{
 
 		if(length == true){
             size = username.length();
-            System.out.println("Username length: " + size);
+            //System.out.println("Username length: " + size);
         }
 
-		if(username.substring(0).matches("[A-Z][a-z]*")){
+		if(username.substring(0,0).matches("[A-Z]*")){
 			startLetter = true;
 		}else{
 			startLetter = false;
 		}
 
-		if(username.substring().find("0-9*")){
+		if(username.substring(1, size).find("0-9*")){
 			haveNumber = true;
 		} else{
 			haveNumber = false;
 		}
 
 		if(username.substring().matches("_") && username.substring().lastIndexOf("_")){
-			underscore = false;
+			haveAunderscore = false;
 		} else{
-			underscore = true;
+			haveAunderscore = true;
 		}
 
 
-		if (lenght == true && startLetter == true && haveNumber == true && underscore == true){
+		if (lenght == true && isALetter == true && haveNumber == true && haveAunderscore == true){
 			System.out.print("This username complies with the rules");
 		} else{
 			System.out.print("This username is not allowed");
