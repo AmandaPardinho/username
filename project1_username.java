@@ -1,7 +1,6 @@
 package projeto1_username;
 
 import java.util.*;
-import java.io.*;
 
 public class Main{
 
@@ -11,11 +10,11 @@ public class Main{
 		boolean length;
 		boolean isALetter;
 		boolean haveNumber;
-		boolean haveAUnderscore;
+		boolean haveAnUnderscore;
 		boolean isInTheEnd;
 		int size = 0;
 				
-		Scanner scanner = new Scanner (System.in);
+		Scanner scanner = new Scanner(System.in);
 
 		System.out.println("Create a username following these simple rules: ");
 
@@ -52,26 +51,23 @@ public class Main{
 			haveNumber = false;
 		}
 
-		if(username.substring().contains("_")){
-			haveAUnderscore = true;
+		if(username.substring(1).contains("_")){
+			haveAnUnderscore = true;
 		} else{
-			haveAUnderscore = false;
+			haveAnUnderscore = false;
 		}
 
-		if(username.substring().lastIndexOf("underscore")){
-			//not allowed
+		if(haveAnUnderscore == true && username.substring(size - 1).matches("_")){
 			isInTheEnd = true;
 		} else{
-			//alowed
 			isInTheEnd = false;
 		}
 
-		if (lenght == true && isALetter == true && haveNumber == true && haveAUnderscore == true && isInTheEnd == false){
+		if (lenght == true && isALetter == true && haveNumber == true && haveAnUnderscore == true && isInTheEnd == false){
 			System.out.print("This username complies with the rules");
 		} else{
-			System.out.print("This username is not allowed");
+			System.out.print("This username is not allowed.");
 		}	
-		
 	}
 }
 
