@@ -52,7 +52,7 @@ public class Main{
 			haveNumber = false;
 		}
 
-		if(username.substring().matches("underscore"){
+		if(username.substring().contains("_")){
 			haveAUnderscore = true;
 		} else{
 			haveAUnderscore = false;
