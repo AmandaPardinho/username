@@ -46,7 +46,7 @@ public class Main{
 			isALetter = false;
 		}
 
-		if(isALetter == true && username.substring(1).matches("[0-9]*")){
+		if(isALetter == true && username.substring(1).matches(".*\\d+.*")){
 			haveNumber = true;
 		} else{
 			haveNumber = false;
@@ -66,7 +66,7 @@ public class Main{
 			isInTheEnd = false;
 		}
 
-		if (lenght == true && isALetter == true && haveNumber == true && haveAunderscore == true && isInTheEnd == false){
+		if (lenght == true && isALetter == true && haveNumber == true && haveAUnderscore == true && isInTheEnd == false){
 			System.out.print("This username complies with the rules");
 		} else{
 			System.out.print("This username is not allowed");
