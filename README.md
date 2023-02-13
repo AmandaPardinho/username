@@ -1,4 +1,4 @@
-# Creating an Username
+# **Creating an Username**
 
 Many applications need a username to login. Imagine an application with these rules to create a username:
 
@@ -8,3 +8,5 @@ Many applications need a username to login. Imagine an application with these ru
 4. It cannot finish with an underscore character.
 
 If user obeys the rules, the program should return a message "This username complies with the rules", otherwise return a message "This username is not allowed".
+
+---
